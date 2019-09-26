@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+아티클 생성::Article
+{% endblock title %}
+
+{% block body %}
+<h1>생성하는 페이지 입니다.</h1>
+<a href="{% url 'articles:index' %}">[뒤로가기]</a>
+<hr>
+<form action="#" method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Create</button>
+</form>
+
+{% endblock body %}
